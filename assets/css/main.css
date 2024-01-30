@@ -1203,6 +1203,12 @@ button {
   width: 264px;
   padding: 53px 40px 62px 40px;
 }
+@media (max-width: 1399.98px) {
+  .sidebar {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
 .sidebar__heading {
   margin-top: 60px;
   font-size: 3.1rem;
@@ -1218,9 +1224,29 @@ button {
   gap: 10px;
   padding: 13px 0;
 }
+@media (max-width: 1399.98px) {
+  .sidebar__link {
+    font-size: 1.2rem;
+  }
+}
 .sidebar__link-help {
   margin-top: 320px;
   gap: 15px;
+}
+@media (max-width: 1399.98px) {
+  .sidebar__link-help {
+    gap: 10px;
+  }
+}
+.sidebar__item-icon {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 1399.98px) {
+  .sidebar__item-icon-chat {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .column-right {
@@ -1230,6 +1256,12 @@ button {
 .container-small {
   width: 100%;
   padding: 48px 54px 67px 38px;
+}
+@media (max-width: 1399.98px) {
+  .container-small {
+    padding-left: 10px;
+    padding-right: 20px;
+  }
 }
 
 .header {
@@ -1243,6 +1275,11 @@ button {
   display: flex;
   align-items: center;
   gap: 18px;
+}
+@media (max-width: 767.98px) {
+  .header-search {
+    display: none;
+  }
 }
 .header-search__input {
   width: 102px;

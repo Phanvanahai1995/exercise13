@@ -1,6 +1,13 @@
+@use "../abstracts";
+
 .sidebar {
   width: 264px;
   padding: 53px 40px 62px 40px;
+
+  @include abstracts.screen(xxl) {
+    padding-left: 0;
+    padding-right: 20px;
+  }
 
   &__heading {
     margin-top: 60px;
@@ -19,9 +26,30 @@
     gap: 10px;
     padding: 13px 0;
 
+    @include abstracts.screen(xxl) {
+      font-size: 1.2rem;
+    }
+
     &-help {
       margin-top: 320px;
       gap: 15px;
+
+      @include abstracts.screen(xxl) {
+        gap: 10px;
+      }
+    }
+  }
+
+  &__item {
+    &-icon {
+      width: 20px;
+      height: 20px;
+    }
+    @include abstracts.screen(xxl) {
+      &-icon-chat {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }
