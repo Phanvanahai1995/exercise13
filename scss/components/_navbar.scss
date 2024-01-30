@@ -29,6 +29,10 @@
       width: 75px;
       height: 2px;
       background: #000;
+
+      @include abstracts.screen(md) {
+        width: 55px;
+      }
     }
   }
 

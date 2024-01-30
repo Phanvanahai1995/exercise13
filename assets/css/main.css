@@ -1209,6 +1209,11 @@ button {
     padding-right: 20px;
   }
 }
+@media (max-width: 767.98px) {
+  .sidebar-logo {
+    width: 80%;
+  }
+}
 .sidebar__heading {
   margin-top: 60px;
   font-size: 3.1rem;
@@ -1370,6 +1375,11 @@ button {
   width: 75px;
   height: 2px;
   background: #000;
+}
+@media (max-width: 767.98px) {
+  .navbar__link-decorate::before {
+    width: 55px;
+  }
 }
 .navbar__icon-basket {
   padding: 0 26px 0 5px;
