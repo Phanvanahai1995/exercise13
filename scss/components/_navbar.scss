@@ -1,0 +1,31 @@
+.navbar {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    padding-right: 44px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #000;
+
+    &-decorate {
+      position: relative;
+    }
+
+    &-decorate::before {
+      position: absolute;
+      content: "";
+      bottom: -7px;
+      display: block;
+      width: 75px;
+      height: 2px;
+      background: #000;
+    }
+  }
+
+  &__icon-basket {
+    padding: 0 26px 0 5px;
+  }
+}

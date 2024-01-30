@@ -1,0 +1,34 @@
+.column-right {
+  display: flex;
+}
+
+.container-small {
+  width: 100%;
+  padding: 48px 54px 67px 38px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 25px;
+  width: 100%;
+
+  &-search {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    &__input {
+      width: 102px;
+      height: 23px;
+
+      &::placeholder {
+        color: #000;
+        font-size: 1.4rem;
+        font-weight: 400;
+        opacity: 0.2;
+      }
+    }
+  }
+}

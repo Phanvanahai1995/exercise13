@@ -1,0 +1,27 @@
+.sidebar {
+  width: 264px;
+  padding: 53px 40px 62px 40px;
+
+  &__heading {
+    margin-top: 60px;
+    font-size: 3.1rem;
+    font-weight: 800;
+    color: #000;
+  }
+
+  &__list {
+    margin-top: 33px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 0;
+
+    &-help {
+      margin-top: 320px;
+      gap: 15px;
+    }
+  }
+}
