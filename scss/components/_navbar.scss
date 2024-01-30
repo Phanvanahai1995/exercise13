@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .navbar {
   &__list {
     display: flex;
@@ -9,6 +11,11 @@
     font-size: 1.7rem;
     font-weight: 600;
     color: #000;
+
+    @include abstracts.screen(md) {
+      font-size: 1.4rem;
+      padding-right: 15px;
+    }
 
     &-decorate {
       position: relative;
