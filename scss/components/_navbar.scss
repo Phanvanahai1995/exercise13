@@ -36,6 +36,12 @@
     }
   }
 
+  &__icon-person {
+    @include abstracts.screen(sm) {
+      display: none;
+    }
+  }
+
   &__icon-basket {
     padding: 0 26px 0 5px;
   }

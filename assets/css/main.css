@@ -1381,6 +1381,11 @@ button {
     width: 55px;
   }
 }
+@media (max-width: 575.98px) {
+  .navbar__icon-person {
+    display: none;
+  }
+}
 .navbar__icon-basket {
   padding: 0 26px 0 5px;
 }
