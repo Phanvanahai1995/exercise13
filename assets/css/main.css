@@ -1313,6 +1313,12 @@ button {
 .masonry-item {
   border-radius: 15px;
 }
+@media (max-width: 767.98px) {
+  .masonry-item {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
 .masonry-item img {
   width: 100%;
   height: 100%;
@@ -1328,6 +1334,12 @@ button {
 @media (max-width: 1399.98px) {
   .masonry-item__small {
     grid-column: span 1;
+  }
+}
+@media (max-width: 767.98px) {
+  .masonry-item__small {
+    grid-column: span 2;
+    grid-row: span 1;
   }
 }
 
