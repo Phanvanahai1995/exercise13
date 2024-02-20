@@ -1,48 +1,88 @@
 @use "../abstracts";
 
 .navbar {
+  display: flex;
+  align-items: center;
+
+  @include abstracts.screen(lg) {
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 50px 20px;
+    background: #fff;
+    inset: 0 0 -100% 60%;
+    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+  }
+
+  @include abstracts.screen(md) {
+    inset: 0 0 -100% 50%;
+  }
+
   &__list {
     display: flex;
     align-items: center;
+    column-gap: 46px;
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 30px;
+    }
   }
 
   &__link {
-    padding-right: 44px;
-    font-size: 1.7rem;
-    font-weight: 600;
+    position: relative;
     color: #000;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 8px 0;
 
-    @include abstracts.screen(md) {
-      font-size: 1.4rem;
-      padding-right: 15px;
-    }
-
-    &-decorate {
-      position: relative;
-    }
-
-    &-decorate::before {
-      position: absolute;
+    &::after {
       content: "";
-      bottom: -7px;
-      display: block;
-      width: 75px;
-      height: 2px;
-      background: #000;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #000000;
+      transition: width 0.5s;
+    }
 
-      @include abstracts.screen(md) {
-        width: 55px;
-      }
+    &-decorate::after,
+    &:hover::after {
+      width: 100%;
     }
   }
 
-  &__icon-person {
-    @include abstracts.screen(sm) {
-      display: none;
+  &__actions {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+    @include abstracts.screen(lg) {
+      margin-left: 0;
     }
   }
+}
 
-  &__icon-basket {
-    padding: 0 26px 0 5px;
+input[type="checkbox"] {
+  @include abstracts.screen(lg) {
+    &:checked ~ .navbar {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:checked + .header__overlay {
+      position: absolute;
+      inset: 0 0 -100% 0;
+      background-color: #9f9b9b;
+      opacity: 0.4;
+    }
   }
 }

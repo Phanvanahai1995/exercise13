@@ -1,7 +1,6 @@
-@font-face {
-  font-family: "Sofia Pro";
-  src: url(/assets/font/sofiapro/sofiapro-light.otf);
-}
+@use "../abstracts";
+
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700;800&display=swap");
 
 *,
 ::after,
@@ -16,7 +15,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Sofia Pro";
+  font-family: "Sofia Sans", sans-serif;
 }
 
 a {
@@ -28,4 +27,46 @@ input,
 button {
   outline: 0;
   border: 0;
+}
+
+.container {
+  width: 1508px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1.18fr 1.18fr 1.18fr 1.18fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "sidebar header header header header"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main"
+    "sidebar main main main main";
+
+  @include abstracts.screen(xl) {
+    max-width: 960px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header header header header"
+      "sidebar sidebar sidebar sidebar"
+      "main main main main"
+      "main main main main"
+      "main main main main";
+  }
+
+  @include abstracts.screen(lg) {
+    max-width: 720px;
+    padding-bottom: 20px;
+  }
+
+  @include abstracts.screen(md) {
+    max-width: 540px;
+  }
+
+  @include abstracts.screen(sm) {
+    max-width: 100%;
+    padding: 10px;
+  }
 }

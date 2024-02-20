@@ -1,50 +1,65 @@
 @use "../abstracts";
+@use "../base";
 
 .masonry {
   &-layout {
+    grid-area: main;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(271px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 188px;
     grid-auto-flow: dense;
     gap: 22px;
-    margin-top: 69px;
+    padding: 0 54px 0 38px;
 
-    @include abstracts.screen(xxl) {
-      gap: 10px;
+    @include abstracts.screen(xl) {
+      padding: 0;
+    }
+
+    @include abstracts.screen(lg) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
   }
 
   &-item {
-    border-radius: 15px;
+    border-radius: 16px;
+    overflow: hidden;
 
-    @include abstracts.screen(md) {
-      grid-column: span 2;
-      grid-row: span 1;
+    @include abstracts.screen(lg) {
+      &__hide-tablet {
+        display: none;
+      }
+    }
+
+    @include abstracts.screen(sm) {
+      &__hide-tablet {
+        display: block;
+      }
     }
 
     img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
-      border-radius: 15px;
+      cursor: pointer;
     }
 
     &__big {
       grid-column: span 2;
+      @include abstracts.screen(lg) {
+        &-tablet {
+          grid-row-start: 2;
+          grid-row-end: 3;
+        }
+      }
+
+      @include abstracts.screen(sm) {
+        grid-column: span 4;
+      }
     }
 
     &__tall {
       grid-row: span 2;
-    }
-
-    &__small {
-      @include abstracts.screen(xxl) {
-        grid-column: span 1;
-      }
-
-      @include abstracts.screen(md) {
-        grid-column: span 2;
-        grid-row: span 1;
+      @include abstracts.screen(sm) {
+        display: none;
       }
     }
   }

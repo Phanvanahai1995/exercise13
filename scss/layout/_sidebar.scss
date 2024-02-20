@@ -1,65 +1,121 @@
 @use "../abstracts";
+@use "../base";
 
 .sidebar {
-  width: 264px;
-  padding: 53px 40px 62px 40px;
+  grid-area: sidebar;
+  padding: 54px 0 0 58px;
+  display: flex;
+  flex-direction: column;
 
-  @include abstracts.screen(xxl) {
-    padding-left: 0;
-    padding-right: 20px;
+  @include abstracts.screen(xl) {
+    display: block;
+    padding: 0;
+    margin-bottom: 20px;
   }
 
-  &-logo {
-    @include abstracts.screen(md) {
-      width: 80%;
+  &-img {
+    @include abstracts.screen(xl) {
+      display: none;
     }
   }
 
   &__heading {
     margin-top: 60px;
-    font-size: 3.1rem;
+    font-size: 3.2rem;
     font-weight: 800;
     color: #000;
 
-    @include abstracts.screen(md) {
-      font-size: 2rem;
+    @include abstracts.screen(xl) {
+      text-align: center;
+      margin: 0 0 20px 0;
     }
   }
 
   &__list {
-    margin-top: 33px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    row-gap: 18px;
+
+    @include abstracts.screen(xl) {
+      margin-top: 0;
+      flex-direction: row;
+      overflow-x: auto;
+    }
   }
 
   &__link {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 13px 0;
+    column-gap: 12px;
+    padding: 6px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+    border-radius: 8px;
+    transition: background-color 0.4s;
 
-    @include abstracts.screen(xxl) {
-      font-size: 1.2rem;
+    @include abstracts.screen(xl) {
+      justify-content: center;
+      flex-wrap: nowrap;
+      width: 100%;
+      margin-left: 20px;
+    }
+
+    &-living {
+      @include abstracts.screen(xl) {
+        width: 150px;
+      }
+    }
+
+    &-new {
+      @include abstracts.screen(xl) {
+        width: 100px;
+      }
+
+      @include abstracts.screen(lg) {
+        margin-left: 0;
+      }
+    }
+
+    &:hover {
+      background-color: #ebebeb;
     }
 
     &-help {
-      margin-top: 320px;
-      gap: 15px;
+      position: fixed;
+      top: 593px;
+      left: 58px;
 
-      @include abstracts.screen(xxl) {
-        gap: 10px;
+      @include abstracts.screen(xl) {
+        width: auto;
+      }
+
+      @include abstracts.screen(lg) {
+        left: 91px;
+      }
+
+      @include abstracts.screen(md) {
+        left: 25px;
+      }
+
+      @include abstracts.screen(sm) {
+        // top: 700px;
+        left: -25px;
       }
     }
   }
 
   &__item {
-    &-icon {
-      width: 20px;
-      height: 20px;
+    @include abstracts.screen(xl) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    @include abstracts.screen(xxl) {
-      &-icon-chat {
-        width: 20px;
-        height: 20px;
-      }
+
+    &-icon {
+      width: 22px;
+      height: 22px;
     }
   }
 }

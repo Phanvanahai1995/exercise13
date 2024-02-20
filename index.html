@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wigs Ecommerce</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -35,220 +40,217 @@
   </head>
   <body>
     <div class="container">
-      <div class="column-right">
-        <aside class="sidebar">
-          <div class="sidebar-img">
-            <a href="#"
-              ><img
-                src="./assets/img/logo.svg"
-                alt="caped"
-                class="sidebar-logo"
-            /></a>
-          </div>
-          <h2 class="sidebar__heading">Explore</h2>
-          <ul class="sidebar__list">
-            <li class="sidebar__item">
-              <a href="#!" class="sidebar__link">
-                <img
-                  src="./assets/img/icon/icon-01.svg"
-                  alt=""
-                  class="sidebar__item-icon"
-                />
-                New In
-              </a>
+      <!-- Header -->
+      <header class="header">
+        <div class="header-img">
+          <a href="#"
+            ><img src="./assets/img/logo.svg" alt="caped" class="header-logo"
+          /></a>
+        </div>
+        <div class="header-search">
+          <label for="search"
+            ><img
+              src="./assets/img/icon/search.svg"
+              alt="search"
+              class="header-search__icon"
+          /></label>
+          <input
+            type="text"
+            name="search"
+            class="header-search__input"
+            placeholder="Search store"
+          />
+        </div>
+        <label for="hide" class="header-bars">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" name="hide" id="hide" hidden />
+        <label for="hide" class="header__overlay"></label>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#"
+                ><img
+                  src="./assets/img/logo.svg"
+                  alt="caped"
+                  class="header-logo header-logo__tablet"
+              /></a>
             </li>
-            <li class="sidebar__item">
-              <a href="#!" class="sidebar__link">
-                <img
-                  src="./assets/img/icon/icon-02.svg"
-                  alt=""
-                  class="sidebar__item-icon"
-                />
-                Clothing
-              </a>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link navbar__link-decorate"
+                >products</a
+              >
             </li>
-            <li class="sidebar__item">
-              <a href="#!" class="sidebar__link">
-                <img
-                  src="./assets/img/icon/icon-03.svg"
-                  alt=""
-                  class="sidebar__item-icon"
-                />
-                Shoes
-              </a>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">story</a>
             </li>
-            <li class="sidebar__item">
-              <a href="#!" class="sidebar__link">
-                <img
-                  src="./assets/img/icon/icon-04.svg"
-                  alt=""
-                  class="sidebar__item-icon"
-                />
-                Accessories
-              </a>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">manufacturing</a>
             </li>
-            <li class="sidebar__item">
-              <a href="#!" class="sidebar__link">
-                <img
-                  src="./assets/img/icon/icon-05.svg"
-                  alt=""
-                  class="sidebar__item-icon"
-                />
-                Activewear
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a href="#!" class="sidebar__link">
-                <img
-                  src="./assets/img/icon/icon-06.svg"
-                  alt=""
-                  class="sidebar__item-icon"
-                />
-                Gifts & Living
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a href="#!" class="sidebar__link">
-                <img
-                  src="./assets/img/icon/icon-07.svg"
-                  alt=""
-                  class="sidebar__item-icon"
-                />
-                Inspiration
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a href="#!" class="sidebar__link sidebar__link-help">
-                <img
-                  src="./assets/img/icon/chat.svg"
-                  alt=""
-                  class="sidebar__item-icon-chat"
-                />
-                Help Center
-              </a>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">packaging</a>
             </li>
           </ul>
-        </aside>
-        <div class="container-small">
-          <header class="header">
-            <div class="header-search">
-              <label for="search"
-                ><img
-                  src="./assets/img/icon/search.svg"
-                  alt="search"
-                  class="header-search__icon"
-              /></label>
-              <input
-                type="search"
-                name="search"
-                id="search"
-                class="header-search__input"
-                placeholder="Search store"
-              />
-            </div>
-            <nav class="navbar">
-              <ul class="navbar__list">
-                <li class="navbar__item">
-                  <a href="#!" class="navbar__link navbar__link-decorate"
-                    >products</a
-                  >
-                </li>
-                <li class="navbar__item">
-                  <a href="#!" class="navbar__link">story</a>
-                </li>
-                <li class="navbar__item">
-                  <a href="#!" class="navbar__link">manufacturing</a>
-                </li>
-                <li class="navbar__item">
-                  <a href="#!" class="navbar__link">packaging</a>
-                </li>
-                <li class="navbar__item">
-                  <a href="#!" class="navbar__icon navbar__icon-basket">
-                    <img src="./assets/img/icon/basket.svg" alt="basket" />
-                  </a>
-                </li>
-                <li class="navbar__item">
-                  <a href="#!" class="navbar__icon navbar__icon-person">
-                    <img src="./assets/img/icon/person.svg" alt="person" />
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </header>
-          <div class="masonry-layout">
-            <div class="masonry-item masonry-item__big">
-              <a href="#!">
-                <img
-                  src="./assets/img/icon/masonry-01.svg"
-                  alt=""
-                  class="masonry-image"
-                />
-              </a>
-            </div>
-            <div class="masonry-item masonry-item__tall">
-              <a href="#!">
-                <img
-                  src="./assets/img/icon/masonry-04.svg"
-                  alt=""
-                  class="masonry-image"
-                />
-              </a>
-            </div>
-            <div class="masonry-item masonry-item__tall">
-              <a href="#!">
-                <img
-                  src="./assets/img/icon/masonry-03.svg"
-                  alt=""
-                  class="masonry-image"
-                />
-              </a>
-            </div>
-            <div class="masonry-item masonry-item__big">
-              <a href="#!">
-                <img
-                  src="./assets/img/icon/masonry-02.svg"
-                  alt=""
-                  class="masonry-image"
-                />
-              </a>
-            </div>
-            <div class="masonry-item masonry-item__tall">
-              <a href="#!">
-                <img
-                  src="./assets/img/icon/masonry-05.svg"
-                  alt=""
-                  class="masonry-image"
-                />
-              </a>
-            </div>
-            <div class="masonry-item masonry-item__tall">
-              <a href="#!">
-                <img
-                  src="./assets/img/icon/masonry-06.svg"
-                  alt=""
-                  class="masonry-image"
-                />
-              </a>
-            </div>
-            <div class="masonry-item masonry-item__big masonry-item__small">
-              <a href="#!">
-                <img
-                  src="./assets/img/icon/masonry-07.svg"
-                  alt=""
-                  class="masonry-image"
-                />
-              </a>
-            </div>
-            <div class="masonry-item masonry-item__big masonry-item__small">
-              <a href="#!">
-                <img
-                  src="./assets/img/icon/masonry-08.svg"
-                  alt=""
-                  class="masonry-image"
-                />
-              </a>
-            </div>
+          <div class="navbar__actions">
+            <a href="#!" class="navbar__icon navbar__icon-basket">
+              <img src="./assets/img/icon/basket.svg" alt="basket" />
+            </a>
+            <a href="#!" class="navbar__icon navbar__icon-person">
+              <img src="./assets/img/icon/person.svg" alt="person" />
+            </a>
           </div>
+        </nav>
+      </header>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-img">
+          <a href="#"
+            ><img src="./assets/img/logo.svg" alt="caped" class="sidebar-logo"
+          /></a>
+        </div>
+        <h2 class="sidebar__heading">Explore</h2>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a href="#!" class="sidebar__link sidebar__link-new">
+              <img
+                src="./assets/img/icon/icon-01.svg"
+                alt=""
+                class="sidebar__item-icon"
+              />
+              New In
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#!" class="sidebar__link">
+              <img
+                src="./assets/img/icon/icon-02.svg"
+                alt=""
+                class="sidebar__item-icon"
+              />
+              Clothing
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#!" class="sidebar__link">
+              <img
+                src="./assets/img/icon/icon-03.svg"
+                alt=""
+                class="sidebar__item-icon"
+              />
+              Shoes
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#!" class="sidebar__link">
+              <img
+                src="./assets/img/icon/icon-04.svg"
+                alt=""
+                class="sidebar__item-icon"
+              />
+              Accessories
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#!" class="sidebar__link">
+              <img
+                src="./assets/img/icon/icon-05.svg"
+                alt=""
+                class="sidebar__item-icon"
+              />
+              Activewear
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#!" class="sidebar__link sidebar__link-living">
+              <img
+                src="./assets/img/icon/icon-06.svg"
+                alt=""
+                class="sidebar__item-icon"
+              />
+              Gifts & Living
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#!" class="sidebar__link">
+              <img
+                src="./assets/img/icon/icon-07.svg"
+                alt=""
+                class="sidebar__item-icon"
+              />
+              Inspiration
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#!" class="sidebar__link sidebar__link-help">
+              <img
+                src="./assets/img/icon/chat.svg"
+                alt=""
+                class="sidebar__item-icon-chat"
+              />
+              Help Center
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Masonry -->
+      <div class="masonry-layout">
+        <div class="masonry-item masonry-item__big">
+          <img
+            src="./assets/img/icon/masonry-01.svg"
+            alt=""
+            class="masonry-image"
+          />
+        </div>
+        <div class="masonry-item masonry-item__tall">
+          <img
+            src="./assets/img/icon/masonry-04.svg"
+            alt=""
+            class="masonry-image"
+          />
+        </div>
+        <div class="masonry-item masonry-item__tall">
+          <img
+            src="./assets/img/icon/masonry-03.svg"
+            alt=""
+            class="masonry-image"
+          />
+        </div>
+        <div class="masonry-item masonry-item__big masonry-item__big-tablet">
+          <img
+            src="./assets/img/icon/masonry-02.svg"
+            alt=""
+            class="masonry-image"
+          />
+        </div>
+        <div class="masonry-item masonry-item__tall">
+          <img
+            src="./assets/img/icon/masonry-05.svg"
+            alt=""
+            class="masonry-image"
+          />
+        </div>
+        <div class="masonry-item masonry-item__tall">
+          <img
+            src="./assets/img/icon/masonry-06.svg"
+            alt=""
+            class="masonry-image"
+          />
+        </div>
+        <div class="masonry-item masonry-item__big masonry-item__hide-tablet">
+          <img
+            src="./assets/img/icon/masonry-07.svg"
+            alt=""
+            class="masonry-image"
+          />
+        </div>
+        <div class="masonry-item masonry-item__big masonry-item__hide-tablet">
+          <img
+            src="./assets/img/icon/masonry-08.svg"
+            alt=""
+            class="masonry-image"
+          />
         </div>
       </div>
     </div>
