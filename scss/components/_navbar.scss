@@ -8,16 +8,13 @@
     justify-content: flex-start;
     flex-direction: column;
     row-gap: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
     padding: 50px 20px;
     background: #fff;
-    inset: 0 0 -100% 60%;
     transform: translateX(100%);
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+    inset: 0 0 -100% 60%;
+
+    transition: transform 0.3s;
   }
 
   @include abstracts.screen(md) {
@@ -74,8 +71,6 @@ input[type="checkbox"] {
   @include abstracts.screen(lg) {
     &:checked ~ .navbar {
       transform: translateX(0);
-      visibility: visible;
-      opacity: 1;
     }
 
     &:checked + .header__overlay {

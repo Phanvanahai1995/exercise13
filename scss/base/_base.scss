@@ -10,7 +10,6 @@
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -30,7 +29,7 @@ button {
 }
 
 .container {
-  width: 1508px;
+  max-width: 1508px;
   margin: 0 auto;
   padding-bottom: 60px;
   display: grid;
@@ -45,6 +44,7 @@ button {
 
   @include abstracts.screen(xl) {
     max-width: 960px;
+
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto 1fr 1fr;
     gap: 0px 0px;

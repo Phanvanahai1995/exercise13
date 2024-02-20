@@ -142,7 +142,6 @@ table {
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -162,7 +161,7 @@ button {
 }
 
 .container {
-  width: 1508px;
+  max-width: 1508px;
   margin: 0 auto;
   padding-bottom: 60px;
   display: grid;
@@ -440,16 +439,12 @@ button {
     justify-content: flex-start;
     flex-direction: column;
     row-gap: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
     padding: 50px 20px;
     background: #fff;
-    inset: 0 0 -100% 60%;
     transform: translateX(100%);
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+    inset: 0 0 -100% 60%;
+    transition: transform 0.3s;
   }
 }
 @media (max-width: 767.98px) {
@@ -504,8 +499,6 @@ button {
 @media (max-width: 991.98px) {
   input[type=checkbox]:checked ~ .navbar {
     transform: translateX(0);
-    visibility: visible;
-    opacity: 1;
   }
   input[type=checkbox]:checked + .header__overlay {
     position: absolute;
