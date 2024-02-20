@@ -412,6 +412,10 @@ button {
 .masonry-item img {
   object-fit: cover;
   cursor: pointer;
+  transition: transform 0.2s linear;
+}
+.masonry-item img:hover {
+  transform: scale(1.1);
 }
 .masonry-item__big {
   grid-column: span 2;
