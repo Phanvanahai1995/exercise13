@@ -356,6 +356,12 @@ button {
   background-color: #fff;
   font-size: 1.8rem;
 }
+@media (max-width: 991.98px) {
+  .header-search__input {
+    width: 70%;
+    font-size: 1.4rem;
+  }
+}
 .header-search__input::placeholder {
   color: #000;
   opacity: 0.2;
