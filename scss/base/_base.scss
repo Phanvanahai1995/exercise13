@@ -67,6 +67,6 @@ button {
 
   @include abstracts.screen(sm) {
     max-width: 100%;
-    padding: 10px;
+    padding: 0 20px;
   }
 }
