@@ -86,6 +86,7 @@
       position: fixed;
       top: 593px;
       left: 58px;
+      z-index: 1;
 
       @include abstracts.screen(xl) {
         width: auto;
