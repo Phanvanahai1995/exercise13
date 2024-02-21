@@ -58,7 +58,7 @@ button {
 
   @include abstracts.screen(lg) {
     max-width: 720px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
 
   @include abstracts.screen(md) {
@@ -67,6 +67,6 @@ button {
 
   @include abstracts.screen(sm) {
     max-width: 100%;
-    padding: 0 20px;
+    padding: 0 20px 40px;
   }
 }
