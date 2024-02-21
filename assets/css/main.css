@@ -163,7 +163,7 @@ button {
 .container {
   max-width: 1508px;
   margin: 0 auto;
-  padding-bottom: 60px;
+  padding-bottom: 67px;
   display: grid;
   grid-template-columns: 1fr 1.18fr 1.18fr 1.18fr 1.18fr;
   grid-template-rows: auto 1fr 1fr 1fr 1fr;
@@ -223,7 +223,7 @@ button {
 @media (max-width: 1199.98px) {
   .sidebar__heading {
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 20px 0;
   }
 }
 .sidebar__list {
@@ -317,8 +317,7 @@ button {
   grid-area: header;
   display: flex;
   align-items: center;
-  height: 128px;
-  padding: 0 54px 0 38px;
+  padding: 51px 54px 47px 38px;
 }
 .header-logo__tablet {
   display: none;
@@ -383,6 +382,7 @@ button {
   grid-auto-flow: dense;
   gap: 22px;
   padding: 0 54px 0 38px;
+  margin-top: 22px;
 }
 @media (max-width: 1199.98px) {
   .masonry-layout {
